@@ -117,7 +117,7 @@ KEYTAR_OP_RESULT SetPassword(const std::string& service,
                  const std::string& account,
                  const std::string& password,
                  std::string* errStr) {
-  LPWSTR target_name = utf8ToWideChar(service + '/' + account);
+  LPWSTR target_name = utf8ToWideChar(service);
   if (target_name == NULL) {
     return FAIL_ERROR;
   }
